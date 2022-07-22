@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trispace', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background: #484747;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* header input/ button styles */
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3vw;
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+button,
+input,
+.descriptionButton{
+  border: none;
+  padding: .25rem;
+  background:rgba(14, 14, 14, 0.363);
+  text-transform: uppercase;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: .25rem;
+  font-size: .8rem;
+}
+input,
+button{
+  margin-right: 1rem;
+  color-scheme: dark;
+}
+.descriptionButton{
+  display: grid;
+  place-items: center;
+}
+button,
+.descriptionButton{
+  cursor: pointer;
+}
+nav a{
+  color: white;
+}
+input::placeholder{
+  color: transparent;
+}
+input[type="date"]::before{
+  color: #ffffff;
+}
+input[type="date"]:focus::before {
+  content: "" !important;
+}
+
+/* image/ container styles */
+
+.container {
+  width: 100%;
+  max-height: 100vh;
+  position: relative;
+  background: radial-gradient(#19191900 50%,#191919 70%, #191919 100%);
+}
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image img,
+.iframe {
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.iframe{
+  margin-top: 5rem;
+  z-index: 2;
+}
+
+/* Description styles */
+
+.showText div{
+  width: 100%;
+  background:#191919;
+  padding: 5rem 10vw;
+  font-size: 1rem;
+  color: rgb(248, 242, 242);
+  line-height: 2;
+}
+.showText div h3{
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+.showText div p{
+  padding-bottom: .5rem;
+}
+.showText div span{
+  font-size: .8rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  ul{
+    flex-direction: column;
+  }
+  input,
+  button{
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .showText div{
+    padding: 5rem 5vw;
+  }
+  .container{
+    background: transparent;
+  }
+  .container::after{
+    z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  mix-blend-mode: normal;
+  background: linear-gradient(180deg,#19191900,#191919);
+  }
+  input[type="date"]::before{
+    content: "Date: "
+  }
+}
+
+
