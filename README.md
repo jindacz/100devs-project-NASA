@@ -11,6 +11,6 @@ Using the NASA Astronomy Picture of the Day API, <a href="https://api.nasa.gov/"
 
 The Pictures and description are pulled from the NASA APOD API. Image is blended by using radial and linear gradients depending on screen size. I tried to make the desktop image look like the user was looking through a telescope.
 
-## Take-away:
+## Takeaways:
 
 Work with gradients to improve the look of the site and also improve my css skills. Refined API knowledge by fetching data and appending it to the dom.
